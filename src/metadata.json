@@ -1,0 +1,21 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "nagata.parama@protonmail.com",
+                "Name": "Nagata Aptana"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "Peek transit arrivals",
+        "EnabledByDefault": true,
+        "Icon": "applications-system",
+        "Id": "id.lifers.transit_peek",
+        "License": "All rights reserved",
+        "Name": "Transit Peek",
+        "Version": "1.0",
+        "Website": "https://lifers.id/transit-peek"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
