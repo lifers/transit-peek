@@ -1,25 +1,47 @@
 import QtQuick
 import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.plasmoid
-import org.kde.plasma.components as PC
-import id.lifers.transit_peek
 
 PlasmoidItem {
-    id: root
+    id: widget
 
-    Timer {
-        interval: 60000
-        repeat: true
-        running: true
-        triggeredOnStart: true
-        onTriggered: GTFSReader.request()
+    TransitFeed {
+        id: feed
+        presets: Plasmoid.configuration.presets
     }
 
-    fullRepresentation: ColumnLayout {
-        anchors.fill: parent
-        PC.Label {
-            Layout.alignment: Qt.AlignCenter
-            text: "hey ho"
+    ArrivalsModel {
+        id: rowsModel
+        feed: feed
+    }
+
+    fullRepresentation: Item {
+        id: popupView
+        Layout.preferredWidth: 450
+        Layout.preferredHeight: 150
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 6
+            spacing: 4
+
+            ArrivalsList {
+                id: arrivalsList
+                visible: arrivalsList.count > 0
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                model: rowsModel
+            }
+
+            PlasmaComponents.Label {
+                visible: arrivalsList.count === 0
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                text: "No arrivals"
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
         }
     }
 }

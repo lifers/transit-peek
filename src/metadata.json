@@ -10,11 +10,10 @@
         "Category": "Utilities",
         "Description": "Peek transit arrivals",
         "EnabledByDefault": true,
-        "Icon": "applications-system",
-        "Id": "id.lifers.transit_peek",
+        "Icon": "appointment-soon-symbolic",
         "License": "All rights reserved",
         "Name": "Transit Peek",
-        "Version": "1.0",
+        "Version": "1.1",
         "Website": "https://lifers.id/transit-peek"
     },
     "X-Plasma-API-Minimum-Version": "6.0"
