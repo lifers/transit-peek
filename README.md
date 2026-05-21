@@ -1,6 +1,7 @@
 # Transit Peek
 
-Peek transit arrivals — a small KDE Plasma applet showing upcoming transit arrivals using GTFS Realtime.
+Peek transit arrivals: a small KDE Plasma applet showing upcoming transit arrivals using GTFS Realtime.
+<img width="522" height="198" alt="Jepretan layar_20260521_112409" src="https://github.com/user-attachments/assets/da08e514-cce1-4b7f-a0f9-bed6b53bc0d0" />
 
 ## Features
 - Shows upcoming arrival predictions for configured stops
